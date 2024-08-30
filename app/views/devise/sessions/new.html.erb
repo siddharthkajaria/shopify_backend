@@ -1,0 +1,41 @@
+<div class="login-box">
+  <div class="login-logo">
+    <%# <a href="assets/stylesheets/index2.html"><b>Delivery</b></a> %>
+    <%= link_to "Shopified", new_session_path(resource_name) %><br />
+  </div>
+  <div class="card">
+    <div class="card-body login-card-body">
+      <p class="login-box-msg">Sign in to start your session</p>
+
+      <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+
+        <%= render "shared/error_messages", resource: resource %>
+
+        <div class="input-group mb-3">
+          <%= f.email_field :email, class: "form-control", id: "exampleInputEmail1", placeholder: "Enter email", required: true, autofocus: true %>
+          <div class="input-group-append">
+            <div class="input-group-text">
+              <span class="fas fa-envelope"></span>
+            </div>
+          </div>
+        </div>
+        <div class="input-group mb-3">
+          <%= f.password_field :password, class: "form-control", id:"exampleInputPassword1", placeholder: "Password", required: true %>
+          <div class="input-group-append">
+            <div class="input-group-text">
+              <span class="fas fa-lock"></span>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-4 mx-auto">
+            <button type="submit" class="btn btn-primary btn-block">Sign In</button><br/>
+          </div>
+        </div>
+
+        <%= render "shared/links" %>
+      <% end %>
+
+    </div>
+  </div>
+</div>

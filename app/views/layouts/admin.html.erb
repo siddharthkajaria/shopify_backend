@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%= render "/shared/head"%>
+
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+
+  <%= render "/shared/link"%>
+
+  <%= stylesheet_link_tag 'admin_application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'admin_application', 'data-turbolinks-track': 'reload' %>
+
+</head>
+
+<body class="hold-transition sidebar-mini layout-fixed">
+  <div class="wrapper">
+
+    <%= render "admin/shared/preloader"%>
+
+    <%= render "admin/shared/header"%>
+
+    <!-- Main Sidebar Container -->
+    <aside class="main-sidebar sidebar-dark-primary elevation-4">
+
+      <!-- Brand Logo -->
+      <a href="<%= admin_dashboard_path %>" class="brand-link">
+        <img src="/admin/images/AdminLTELogo.png" alt="Not found" height="50px">
+        <%# <span class="brand-text font-weight-light">&nbsp;</span> %>
+      </a>
+
+      <%= render "admin/shared/sidebar"%>
+
+    </aside>
+
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+      <section class="content-header"></section>
+      <%= yield %>
+    </div>
+
+  </div>
+  <script>
+    $(function () {
+      $('.select2').select2();
+    })
+  </script>
+</body>
+</html>

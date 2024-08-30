@@ -1,0 +1,46 @@
+<div class="login-box">
+  <div class="login-logo">
+    <%# <a href="assets/stylesheets/index2.html"><b>Delivery</b></a> %>
+    <%= link_to "Mosip", new_registration_path(resource_name) %><br />
+  </div>
+  <div class="card">
+    <div class="card-body login-card-body">
+      <p class="login-box-msg">Sign up to start your session</p>
+
+      <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+        <%= render "shared/error_messages", resource: resource %>
+
+        <div class="input-group mb-3">
+          <%= f.email_field :email, class: "form-control",placeholder: "Enter email", required: true, autofocus: true, autocomplete: "email" %>
+          <div class="input-group-append">
+            <div class="input-group-text">
+              <span class="fas fa-envelope"></span>
+            </div>
+          </div>
+        </div>
+        <div class="input-group mb-3">
+          <%= f.password_field :password, class: "form-control", placeholder: "Password", required: true, autocomplete: "new-password" %>
+          <div class="input-group-append">
+            <div class="input-group-text">
+              <span class="fas fa-lock"></span>
+            </div>
+          </div>
+        </div>
+        <div class="input-group mb-3">
+          <%= f.password_field :password_confirmation, class: "form-control", placeholder: "Conformation Password", required: true, autocomplete: "new-password" %>
+          <div class="input-group-append">
+            <div class="input-group-text">
+              <span class="fas fa-lock"></span>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-4 mx-auto">
+            <button type="submit" class="btn btn-primary btn-block">Sign In</button><br/>
+          </div>
+        </div>
+        <center>You already sign up? <%= render "shared/links" %></center>
+      <% end %>
+    </div>
+  </div>
+</div>

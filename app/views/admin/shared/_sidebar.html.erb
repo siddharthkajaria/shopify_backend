@@ -1,0 +1,50 @@
+<!-- Sidebar -->
+<div class="sidebar">
+  <!-- Sidebar user panel (optional) -->
+  <div class="user-panel mt-1 mb-1 d-flex">
+    <%# <div class="image">
+      <img src="/assets/admin/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+    </div>   %>
+    <div class="info mx-auto">
+      <% if user_signed_in? %>
+        <span style="color: white;"><%= current_user.email %></span>
+      <% end %>
+    </div>
+  </div>
+
+  <!-- Sidebar Menu -->
+  <nav class="mt-2">
+    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+      <!-- Add icons to the links using the .nav-icon class
+          with font-awesome or any other icon font library -->
+
+      <li class="nav-item">
+        <a href="<%= admin_dashboard_path %>" class="nav-link <% if controller.controller_name == 'dashboard' %> active <% end %>">
+          <i class="nav-icon fas fa-tachometer-alt"></i>
+          <p>Dashboard</p>
+        </a>
+      </li>
+
+      <%# Category list demo %>
+      <%# <li class="nav-item">
+        <a href="#" class="nav-link active">
+          <i class="nav-icon fas fa-tachometer-alt"></i>
+          <p>
+            Example <i class="right fas fa-angle-left"></i>
+          </p>
+        </a>
+        <ul class="nav nav-treeview" style="display: none;">
+          <li class="nav-item">
+            <a href="./index.html" class="nav-link active">
+              <i class="far fa-circle nav-icon"></i>
+              <p>Dashboard v1</p>
+            </a>
+          </li>
+        </ul>
+      </li> %>
+
+    </ul>
+  </nav>
+  <!-- /.sidebar-menu -->
+</div>
+<!-- /.sidebar -->

@@ -1,0 +1,6 @@
+rails g model Role name code description:text active:boolean
+rails g model Permission name description:text action subject_class
+rails g model RolePermission role:references permission:references
+
+rails g migration AddRoleToUser role:references
+User.create(email: "kartik@tailwebs.com", role_id: 1, password: "123456")

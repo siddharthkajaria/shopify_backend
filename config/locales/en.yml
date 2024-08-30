@@ -1,0 +1,189 @@
+# Files in the config/locales directory are used for internationalization
+# and are automatically loaded by Rails. If you want to use locales other
+# than English, add the necessary files in this directory.
+#
+# To use the locales, use `I18n.t`:
+#
+#     I18n.t "hello"
+#
+# In views, this is aliased to just `t`:
+#
+#     <%= t("hello") %>
+#
+# To use a different locale, set it with `I18n.locale`:
+#
+#     I18n.locale = :es
+#
+# This would use the information in config/locales/es.yml.
+#
+# The following keys must be escaped otherwise they will not be retrieved by
+# the default I18n backend:
+#
+# true, false, on, off, yes, no
+#
+# Instead, surround them with single quotes.
+#
+# en:
+#   "true": "foo"
+#
+# To learn more, please read the Rails Internationalization guide
+# available at https://guides.rubyonrails.org/i18n.html.
+
+en:
+  hello: "Hello world"
+  devise:
+    confirmations:
+      confirmed: "Your email address has been successfully confirmed."
+      send_instructions: "You will receive an email with instructions for how to confirm your email address in a few minutes."
+      send_paranoid_instructions: "If your email address exists in our database, you will receive an email with instructions for how to confirm your email address in a few minutes."
+    failure:
+      already_authenticated: "You are already signed in."
+      inactive: "Your account is not activated yet."
+      invalid: "Invalid %{authentication_keys} or password."
+      invalid_organization: "Your organisation is invalid."
+      locked: "Your account is locked."
+      last_attempt: "You have one more attempt before your account is locked."
+      not_found_in_database: "Invalid %{authentication_keys} or password."
+      timeout: "Your session expired. Please sign in again to continue."
+      unauthenticated: "You need to sign in or sign up before continuing."
+      unconfirmed: "You have to confirm your email address before continuing."
+      invalid_token_expired: "You providing token is invalid token or expired."
+      user_not_found: "Invalid email, please try again."
+    mailer:
+      confirmation_instructions:
+        subject: "Confirmation instructions"
+      reset_password_instructions:
+        subject: "Reset password instructions"
+      unlock_instructions:
+        subject: "Unlock instructions"
+      email_changed:
+        subject: "Email Changed"
+      password_change:
+        subject: "Password Changed"
+    omniauth_callbacks:
+      failure: "Could not authenticate you from %{kind} because \"%{reason}\"."
+      success: "Successfully authenticated from %{kind} account."
+    passwords:
+      no_token: "You can't access this page without coming from a password reset email. If you do come from a password reset email, please make sure you used the full URL provided."
+      send_instructions: "You will receive an email with OTP & instructions on how to reset your password in a few minutes."
+      send_paranoid_instructions: "If your email address exists in our database, you will receive a password recovery link at your email address in a few minutes."
+      updated: "Your password has been changed successfully. You are now signed in."
+      updated_not_active: "Your password has been changed successfully."
+    registrations:
+      destroyed: "Bye! Your account has been successfully cancelled. We hope to see you again soon."
+      signed_up: "Welcome! You have signed up successfully."
+      already_registered: "Your account is already registered."
+      signed_up_but_inactive: "You have signed up successfully. However, we could not sign you in because your account is not yet activated."
+      signed_up_but_locked: "You have signed up successfully. However, we could not sign you in because your account is locked."
+      signed_up_but_unconfirmed: "A message with a confirmation link has been sent to your email address. Please follow the link to activate your account."
+      update_needs_confirmation: "You updated your account successfully, but we need to verify your new email address. Please check your email and follow the confirmation link to confirm your new email address."
+      updated: "Your account has been updated successfully."
+      updated_but_not_signed_in: "Your account has been updated successfully, but since your password was changed, you need to sign in again."
+    sessions:
+      signed_in: "Signed in successfully."
+      signed_out: "Signed out successfully."
+      invalid: "Credential you entered does not match. Please try again."
+    unlocks:
+      send_instructions: "You will receive an email with instructions for how to unlock your account in a few minutes."
+      send_paranoid_instructions: "If your account exists, you will receive an email with instructions for how to unlock it in a few minutes."
+      unlocked: "Your account has been unlocked successfully. Please sign in to continue."
+  errors:
+    messages:
+      already_confirmed: "was already confirmed, please try signing in"
+      confirmation_period_expired: "needs to be confirmed within %{period}, please request a new one"
+      expired: "has expired, please request a new one"
+      not_found: "not found"
+      user_not_found: "User not found."
+      not_locked: "was not locked"
+      not_saved:
+        one: "1 error prohibited this %{resource} from being saved:"
+        other: "%{count} errors prohibited this %{resource} from being saved:"
+      record_not_found: "Record not found."
+      token_not_provide: "Authorization token where not provided."
+  otp:
+    messing_token: "Header token is messing, please try to generate new OTP."
+    verified_otp: "OTP is verified."
+    invalid_otp: "Invalid OTP."
+  controllers:
+    api:
+      v1:
+        users:
+          acc_not_found: "Account not found."
+          not_found: "Profile not found."
+          show: "Profile found."
+          index: "Matched user list"
+          updated: "Profile updated successfully."
+        meeting_room:
+          not_found: "Meeting room not found"
+          slots_not_available: "Slots not available"
+          future_time: "Meeting room time needs to be greater than current time"
+          index: "Meeting room find."
+          show: "Got the details"
+        meeting_room_booking:
+          invitations: "Got the invitations"
+          invitations_error: "Error in finding invitations"
+          show_success: "Got your booked room"
+          show_error: "Error finding your room"
+          updated_successfully: "Updated Successfully"
+          created_successfully: "Created Successfully"
+        meeting_room_booking_participant:
+          response: "Responded Successfully"
+          calender_event: "successfully updated the participant calender event"
+          calender_event_error: "Error updateding the participant calender event"
+
+
+        polls:
+          created_successfully: "Poll created sucessfully"
+          not_created: "Poll not created"
+          end_poll: "poll ended sucessfully"
+          error_end_poll: "Error while ending poll"
+          not_your_poll: "This is not your poll"
+          not_logged_in_user: "Please loggin and then try again"
+          end_poll: "Poll Ended successfully"
+          live_poll: "successfully made poll active"
+          delete_poll: "Poll Deleted successfully"
+          publish_poll: "Poll Published successfully"
+          cast_vote: "casted a vote successfully"
+          issue_in_cast_vote: "Issue in vote casting"
+          revote_not_allowed: "Issue in revoting"
+          state_change_issue: "Issue in state change"
+          not_in_new_state: "Poll is not in New state"
+        leave:
+          created_successfully: "Leave applied sucessfully"
+          not_created: "Leave not applied sucessfully"
+          available_leave: "Not enough leave left"
+          cannot_change_state: "Cannot move to this state"
+          verify_dates_selected: "verify selected dates"
+        notification:
+          updated_successfully: "Notification updated successfully"
+          updated_unsuccessfully: "Issue in updating Notification"
+        user_badge_reward:
+          updated: "updated successfully."
+          not_updated: "Not updated."
+
+          
+        feed:
+          commented: "Commented sucessfully"
+          comment_issue: "Issue while commenting"
+          reaction: "Reacted sucessfully"
+          reaction_issue: "Issue while Reacting"
+        award:
+          voted: "Voted sucessfully"
+          not_voted: "Issue while voting"
+          selected_date_issue: "Issue with selected dates"
+        album_photo:
+          uploaded_successfully: "photo uploaded sucessfully"
+          uploaded_unsuccessfully: "photo not uploaded sucessfully"
+
+        product_purchased:
+          purchased_successfully: "Purchased Successfully"
+          purchased_unsuccessfully: "Encounter error while purchasing"
+          not_have_enough_points: "Not having enough point"
+          product_not_available: "Product is not available"
+
+
+
+
+
+
+
